@@ -26,7 +26,6 @@ public class TCRModFilterCallback implements PreloadingTricksCallback {
             LOGGER.warn("GLVersion < 4.6, acceleratedrendering mod has been removed.");
         }
         PreloadingTricksModManager.get().removeByIds(Set.of("yes_steve_model", "projecte"));
-        LOGGER.warn("yes_steve_model mod has been removed, it's incompatible with epic fight.");
     }
 
 }
