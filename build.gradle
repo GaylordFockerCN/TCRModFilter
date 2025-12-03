@@ -141,12 +141,17 @@ repositories {
             includeGroup "curse.maven"
         }
     }
+
+    exclusiveContent {
+        forRepository { maven { name = "Modrinth"; url = "https://api.modrinth.com/maven" } }
+        filter { includeGroup "maven.modrinth" }
+    }
 }
 
 dependencies {
     minecraft "net.minecraftforge:forge:${minecraft_version}-${forge_version}"
 
-    implementation "curse.maven:preloading-tricks-1372086:7227569"
+    implementation "maven.modrinth:preloading-tricks:3.2.2"
     implementation fg.deobf("curse.maven:accelerated-rendering-1314021:7196153")
 
 
